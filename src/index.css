@@ -1,0 +1,271 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.oval {
+  width: 85%;
+  background-color: rgb(255, 189, 9);
+  clip-path: ellipse(50% 50% at 50% 50%);
+  text-align: center;
+  font-size: 10px;
+color: blue;
+}
+
+.scrollbar {
+  position:absolute;
+    bottom: -11em;
+  overflow-y: scroll;
+  height: 300px;
+  border: 1px solid #ccc;
+  overflow-x: scroll;
+  width: 400px;
+    left: 29%;
+  transform: scale(2);
+}
+
+.h-12 {
+  position:absolute;
+  bottom: 18em;
+  left: 12%;
+}
+
+  /* Main scrollbar styles */
+  body::-webkit-scrollbar {
+  width: 2em;
+  background-image: url("C:\Users\Istvan\Documents\Adobe\legoscrollbar.jpg");
+  background-size: 100%;
+  }
+  
+  body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  body::-webkit-scrollbar-thumb {
+  background-image: url("C:\Users\Istvan\Documents\Adobe\legoscroll.png"),
+  linear-gradient(100deg, transparent, transparent);
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;  
+  }
+
+   /* Main scrollbar styles */
+   .scrollbar::-webkit-scrollbar {
+    width: 2em;
+    background-image: url("C:\Users\Istvan\Documents\Adobe\legoscrollbar.jpg");
+    background-size: 100%;
+    }
+    
+    .scrollbar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .scrollbar::-webkit-scrollbar-thumb {
+    background-image: url("C:\Users\Istvan\Documents\Adobe\legoscroll.png"),
+    linear-gradient(100deg, transparent, transparent);
+    background-position: top, bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    
+    }
+
+    .logo {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    .home {
+      font-size: 40px;
+    color: black;
+    text-align: center;
+    position: absolute;
+    top: -2em;
+    bottom: 0;
+    left: 2%;
+    height: fit-content;
+    margin: auto;
+  }
+
+  .home:hover {
+    font-size: 50px;
+    color: black;
+    position: absolute;
+    padding-bottom: 1.5em;
+    left: 0.1em;
+    background-image: url('image\\brickbuttonhome.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Additional CSS properties for styling the container */
+  width: 3em;
+  height: 0em;
+  top: 0.5m;
+  bottom: -0.75em;
+  display: flex;
+  }
+
+  .cart {
+    font-size: 28px;
+  color: black;
+  text-align: center;
+  position: absolute;
+  top: 1.25em;
+  bottom: 0;
+  left: 1%;
+  height: fit-content;
+  margin: auto;
+}
+
+.cart:hover {
+  font-size: 32px;
+  color: black;
+  position: absolute;
+  padding-bottom: 1.25em;
+  left: 0.1em;
+  background-image: url('image\\legobuttoncart.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+/* Additional CSS properties for styling the container */
+width: 4.75em;
+height: 1em;
+top: 0.75m;
+bottom: -0.75em;
+display: flex;
+align-items: 2em;
+justify-content: 4em;
+}
+
+.cartText{
+  position: relative;
+  padding-top: 0.5em;
+}
+  
+  .article {
+}
+
+.image {
+    
+}
+
+.header {
+    
+}
+
+.logovertical {
+    background-image: url('image\\legoscrollbarvertical.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Additional CSS properties for styling the container */
+    width: 100%;
+    height: 210px;
+    display: flex;
+}
+
+.legowebshoptext {
+  font-size: 2em;
+  background-color:rgb(255, 189, 9);
+  color: black;
+}
+
+.background-image-container {
+  background-image: url('image\\legobutton.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Additional CSS properties for styling the container */
+  width: 12em;
+  height: 5em;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.background-image-container:hover {
+  font-size: 2.5em;
+position: absolute;
+padding-bottom: 0.5em;
+padding-left: 0.5em;
+left: 0.1em;
+background-image: url('image\\legobutton.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+/* Additional CSS properties for styling the container */
+width: 5em;
+height: 2em;
+bottom: -0.5em;
+transform: scale(1.2);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.addLegoText {
+  font-size: 24px;
+  color: aqua;
+  position: relative;
+  padding-top: 0.75em;
+  right: -0.25em;
+}
+
+.addNewLegoText {
+  background-image: url('image\\redlegobutton.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* Additional CSS properties for styling the container */
+    width: 15em;
+    height: 5em;
+    display: flex;
+}
+
+.addNewLegoContainer {
+  position: relative;
+  padding-left: 10em;
+  bottom: 45em;
+}
+
+.emailInput {
+position: absolute;
+left: 14.7em;
+top: 8em;
+}
+
+.logoFooter {
+  background-image: url('image\\legoscrollbarvertical.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Additional CSS properties for styling the container */
+  width: 100%;
+  height: 210px;
+  display: flex;
+}
+
+.footerContainer {
+  position: absolute;
+  top: 60em;
+  width: 100%;
+}
+
+.legofooter {
+  font-size: 2em;
+  background-color:rgb(255, 189, 9);
+  color: black;
+}
