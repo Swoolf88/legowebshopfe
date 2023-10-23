@@ -2,21 +2,22 @@ import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import LegoService from '../services/LegoService';
 import axios from "axios";
+import Sidebar from './Sidebar';
+import Footer from './Footer';
 
-const UpdateLego = () => {
+const EditLego = () => {
 
     const [image, setImage] = useState();
-
+    const [imageUrl, setImageUrl] = useState(null);
     const ref = useRef();
-
-const {id} = useParams();
-const navigate = useNavigate();
-const [lego, setLego] = useState({
-    id: id,
-    firstName: "",
-    lastName: "",
-    emailId: "",
-    image: "",
+    const {id} = useParams();
+    const navigate = useNavigate();
+    const [lego, setLego] = useState({
+        id: id,
+        firstName: "",
+        lastName: "",
+        emailId: "",
+        image: "",
 })
 
 const handleChange = (e) => {
@@ -56,14 +57,19 @@ const updateLego = (e) => {
 
 const handleUploadFile = (event) => {
     setImage(event.target.files[0]);
+    setImageUrl(URL.createObjectURL(event.target.files[0]));
     console.log("File" + image);
   }
 
     return (
+        <>
+        <Sidebar></Sidebar>
         <div className="flex max-w-2xl mx-auto shadow border-b">
-        <div className="px-8 py-8">
-            <div className="font-thin text-2xl tracking-wider">
-                <h1>Update Lego</h1>
+        <div className="editLegoContainer px-8 py-8">
+            <div className="addNewLegoText font-thin text-2xl tracking-wider">
+                <div className="editLegoText">
+                <h1>Edit Lego</h1>
+                </div>
             </div>
             <div className="items-center justify-center h-14 w-full my-4">
                 <label className="block text-gray-600 text-sm font-normal" >
@@ -93,27 +99,49 @@ const handleUploadFile = (event) => {
                        name="emailId"
                        value={lego.emailId}
                        onChange={(e) => handleChange(e)}
-                       className="h-10 w-96 border mt-2 px-2 py-2"></input>
+                       className="editEmailText h-10 w-96 border mt-2 px-2 py-2"></input>
             </div>
             <div className="items-center justify-center h-14 w-full my-4 space-x-4 pt-4">
-            <input type="file" value={lego.image} onChange={(event) => {
-  handleUploadFile(event);
-  }} ref={ref}/>
-                
+                <div className="selectFileContainer">
+                    <label htmlFor="image" className="selectFileButton block text-gray-600 text-sm font-normal" >
+                        Select file
+                    </label>                    
+                    <input 
+                    className="selectFileButtonInput"
+                    type="file"
+                    ref={ref}
+                    onChange={handleUploadFile}/>                        
+                </div>
+                <div className="imagePreview">
+                    {imageUrl ? 
+                    <img src={imageUrl} width="150" height="150"/> :
+                    <img src={'http://localhost:8080/api/v1/' + lego.image} width="150" height="150"/>
+                    }
+                </div>
+            </div>
+            <div className="editButtonContainer"> 
                <button 
                 onClick={updateLego} 
-                className="rounded text-white font-semibold bg-green-400 hover:bg-green-700 py-2 px-6">
-                   Update
+                className="background-image-container rounded text-white font-semibold bg-green-400 hover:bg-green-700 py-2 px-6">
+                   <div className="addLegoText">
+                    Update
+                   </div>
                </button>
                <button
                onClick={() => navigate("/legoList")}
-               className="rounded text-white font-semibold bg-red-400 hover:bg-red-700 py-2 px-6">
-                   Cancel
+               className="background-image-container rounded text-white font-semibold bg-red-400 hover:bg-red-700 py-2 px-6">
+                   <div className="addLegoText">
+                    Cancel
+                   </div>
                </button>
-            </div>
+            </div>                      
+        </div>
+        <div className="editLegoFooter">
+            <Footer></Footer>
         </div>
     </div>
+    </>
     )
 }
 
-export default UpdateLego
+export default EditLego

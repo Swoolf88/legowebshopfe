@@ -9,6 +9,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: palegreen;
 }
 
 code {
@@ -29,12 +30,13 @@ color: blue;
   position:absolute;
     bottom: -11em;
   overflow-y: scroll;
-  height: 300px;
+  height: 410px;
   border: 1px solid #ccc;
-  overflow-x: scroll;
-  width: 400px;
-    left: 29%;
+  width: 520px;
+    left: 28em;
+    top: 32em;
   transform: scale(2);
+  background-color: palegreen;
 }
 
 .h-12 {
@@ -46,7 +48,7 @@ color: blue;
   /* Main scrollbar styles */
   body::-webkit-scrollbar {
   width: 2em;
-  background-image: url("C:\Users\Istvan\Documents\Adobe\legoscrollbar.jpg");
+  background-image: url("image\\legoscrollbar.jpg");
   background-size: 100%;
   }
   
@@ -55,7 +57,7 @@ color: blue;
   }
   
   body::-webkit-scrollbar-thumb {
-  background-image: url("C:\Users\Istvan\Documents\Adobe\legoscroll.png"),
+  background-image: url("image\\legoscroll.png"),
   linear-gradient(100deg, transparent, transparent);
   background-position: top, bottom;
   background-repeat: no-repeat, no-repeat;
@@ -65,7 +67,7 @@ color: blue;
    /* Main scrollbar styles */
    .scrollbar::-webkit-scrollbar {
     width: 2em;
-    background-image: url("C:\Users\Istvan\Documents\Adobe\legoscrollbar.jpg");
+    background-image: url("image\\legoscrollbar.jpg");
     background-size: 100%;
     }
     
@@ -74,7 +76,7 @@ color: blue;
     }
     
     .scrollbar::-webkit-scrollbar-thumb {
-    background-image: url("C:\Users\Istvan\Documents\Adobe\legoscroll.png"),
+    background-image: url("image\\legoscroll.png"),
     linear-gradient(100deg, transparent, transparent);
     background-position: top, bottom;
     background-repeat: no-repeat, no-repeat;
@@ -84,28 +86,31 @@ color: blue;
 
     .logo {
       object-fit: cover;
-      width: 100%;
-      height: 100%;
+      width: 100em;
+      height: 100em;
+      position: relative;
+      top: -0em;
     }
 
     .home {
       font-size: 40px;
-    color: black;
+    color: red;
     text-align: center;
-    position: absolute;
-    top: -2em;
-    bottom: 0;
-    left: 2%;
+    position: relative;
+    top: 0em;
+    bottom: 0em;
+    left: 0em;
     height: fit-content;
     margin: auto;
   }
 
   .home:hover {
     font-size: 50px;
-    color: black;
-    position: absolute;
+    color: red;
+    position: relative;
     padding-bottom: 1.5em;
     left: 0.1em;
+    top: -1.70m;
     background-image: url('image\\brickbuttonhome.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -113,57 +118,53 @@ color: blue;
   /* Additional CSS properties for styling the container */
   width: 3em;
   height: 0em;
-  top: 0.5m;
-  bottom: -0.75em;
   display: flex;
+  align-items: 5em;
+justify-content: 5em;
+text-align: center;
+  transform: scale(1.2);
   }
 
   .cart {
     font-size: 28px;
-  color: black;
+  color: red;
   text-align: center;
-  position: absolute;
+  position: relative;
   top: 1.25em;
   bottom: 0;
-  left: 1%;
+  left: 1.25em;
   height: fit-content;
   margin: auto;
 }
 
 .cart:hover {
-  font-size: 32px;
-  color: black;
-  position: absolute;
-  padding-bottom: 1.25em;
-  left: 0.1em;
+  font-size: 28px;
+  color: red;
+  position: relative;
+  bottom: 0em;
+  top: 1em;
+  left: 0.5em;
+  height: 3em;
+  width: 5.25em;
   background-image: url('image\\legobuttoncart.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 /* Additional CSS properties for styling the container */
-width: 4.75em;
-height: 1em;
-top: 0.75m;
-bottom: -0.75em;
 display: flex;
-align-items: 2em;
-justify-content: 4em;
+transform: scale(1.2);
 }
 
-.cartText{
+.cartText {
   position: relative;
-  padding-top: 0.5em;
-}
-  
-  .article {
+  top: 0.25em;
+  left: -0.75em;
+
 }
 
-.image {
-    
-}
-
-.header {
-    
+.homeText {
+  position: relative;
+  top: 0.25em;
 }
 
 .logovertical {
@@ -194,21 +195,25 @@ justify-content: 4em;
   display: flex;
 justify-content: center;
 align-items: center;
+position: relative;
+top: 0em;
+left: 2em;
 }
 
 .background-image-container:hover {
-  font-size: 2.5em;
-position: absolute;
+  font-size: 18px;
+position: relative;
+top: 0.5em;
 padding-bottom: 0.5em;
 padding-left: 0.5em;
-left: 0.1em;
+left: 1.1em;
 background-image: url('image\\legobutton.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 /* Additional CSS properties for styling the container */
-width: 5em;
-height: 2em;
+width: 10em;
+height: 4em;
 bottom: -0.5em;
 transform: scale(1.2);
 display: flex;
@@ -218,13 +223,20 @@ align-items: center;
 
 .addLegoText {
   font-size: 24px;
-  color: aqua;
+  color: red;
   position: relative;
   padding-top: 0.75em;
   right: -0.25em;
 }
 
+.addButtonContainer {
+  display: flex;
+  position: relative;
+  top: 1em;
+}
+
 .addNewLegoText {
+font-size: 1.5em;
   background-image: url('image\\redlegobutton.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -237,14 +249,15 @@ align-items: center;
 
 .addNewLegoContainer {
   position: relative;
-  padding-left: 10em;
+  top: -59em;
+  left: 11.5em;
   bottom: 45em;
 }
 
 .emailInput {
 position: absolute;
-left: 14.7em;
-top: 8em;
+left: 4.7em;
+top: 10.5em;
 }
 
 .logoFooter {
@@ -268,4 +281,145 @@ top: 8em;
   font-size: 2em;
   background-color:rgb(255, 189, 9);
   color: black;
+}
+
+.selectFileButtonInput {
+  position: relative;
+  left: 0.65em;
+}
+
+.legoListContainer {
+  width: 15em;
+}
+
+.legoDataText {
+  font-size: 8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.legoContainerText {
+  flex-basis: 33%;
+  flex-grow: 1;
+}
+
+.descriptionText {
+  color: blue;
+}
+
+.priceText {
+  color: magenta;
+}
+
+.editButton {  
+  transform: scale(0.25);
+  position: relative;
+  left: -8.5em;
+}
+
+.editButtonText {
+  font-size: 2em;
+  color: aqua;
+  position: relative;
+  top: 0.25em;
+}
+
+.editDeleteButtonContainer {
+  display: flex;
+  width: 15em;
+  position: relative;
+  top: -3em;
+}
+
+.deleteButton {  
+  transform: scale(0.25);
+  position: relative;
+  left: -23em;
+}
+
+.deleteButtonText {
+  font-size: 2em;
+  color: red;
+  position: relative;
+  top: 0.25em;
+}
+
+.addToCartButton {  
+  transform: scale(0.25);
+  position: relative;
+  left: -37.5em;
+}
+
+.addToCartButtonText {
+  font-size: 1.5em;
+  color: aqua;
+  position: relative;
+  top: 0.25em;
+  left: -0.5em;
+}
+
+.descriptionText{
+  font-size: 1.5em;
+}
+
+.priceText{
+  font-size: 1.5em;
+}
+
+.selectFileContainer {
+  position: relative;
+  top: 0.5em;
+}
+
+.imagePreview {
+  position: relative;
+  top: 1em;
+  left: 5em;
+}
+
+.sidebar {
+  position: relative;
+  top: -0em;
+  left: -0.25em;
+  background-image: url('image\\legoscrollbar.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10em;
+  height: 60em;
+}
+
+.basketIcon{
+  position: relative;
+  left: 0.5em;
+  top: 0.5em;
+}
+
+.editLegoContainer {
+  position: relative;
+  top: -60em;
+  left: 12em;
+}
+
+.editLegoFooter {
+  position: relative;
+  top: -20em;
+}
+
+.editLegoText {
+  position: relative;
+  left: 3em;
+}
+
+.editEmailText {
+  position: relative;
+  left: 2.75em;
+}
+
+.editButtonContainer {
+  transform: scale(0.75);
+  display: flex;
+  position: relative;
+  top: 1em;
+  left: -10em;
 }
