@@ -48,7 +48,7 @@ color: blue;
   /* Main scrollbar styles */
   body::-webkit-scrollbar {
   width: 2em;
-  background-image: url("assets\\images\\legoscrollbar.jpg");
+  background-image: url("assets/images/legoscrollbar.jpg");
   background-size: 100%;
   }
   
@@ -57,7 +57,7 @@ color: blue;
   }
   
   body::-webkit-scrollbar-thumb {
-  background-image: url("assets\\images\\legoscroll.png"),
+  background-image: url("assets/images/legoscroll.png"),
   linear-gradient(100deg, transparent, transparent);
   background-position: top, bottom;
   background-repeat: no-repeat, no-repeat;
@@ -67,7 +67,7 @@ color: blue;
    /* Main scrollbar styles */
    .scrollbar::-webkit-scrollbar {
     width: 2em;
-    background-image: url("assets\\images\\legoscrollbar.jpg");
+    background-image: url("assets/images/legoscrollbar.jpg");
     background-size: 100%;
     }
     
@@ -76,7 +76,7 @@ color: blue;
     }
     
     .scrollbar::-webkit-scrollbar-thumb {
-    background-image: url("assets\\images\\legoscroll.png"),
+    background-image: url("assets/images/legoscroll.png"),
     linear-gradient(100deg, transparent, transparent);
     background-position: top, bottom;
     background-repeat: no-repeat, no-repeat;
@@ -111,7 +111,7 @@ color: blue;
     padding-bottom: 1.5em;
     left: 0.1em;
     top: -1.70m;
-    background-image: url('assets\\images\\brickbuttonhome.jpg');
+    background-image: url('assets/images/brickbuttonhome.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -146,7 +146,7 @@ text-align: center;
   left: 0.5em;
   height: 3em;
   width: 5.25em;
-  background-image: url('assets\\images\\legobuttoncart.jpg');
+  background-image: url('assets/images/legobuttoncart.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -168,7 +168,7 @@ transform: scale(1.2);
 }
 
 .logovertical {
-    background-image: url('assets\\images\\legoscrollbarvertical.jpg');
+    background-image: url('assets/images/legoscrollbarvertical.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -185,7 +185,7 @@ transform: scale(1.2);
 }
 
 .background-image-container {
-  background-image: url('assets\\images\\legobutton.jpg');
+  background-image: url('assets/images/legobutton.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -207,7 +207,7 @@ top: 0.5em;
 padding-bottom: 0.5em;
 padding-left: 0.5em;
 left: 1.1em;
-background-image: url('assets\\images\\legobutton.jpg');
+background-image: url('assets/images/legobutton.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
@@ -237,7 +237,7 @@ align-items: center;
 
 .addNewLegoText {
 font-size: 1.5em;
-  background-image: url('assets\\images\\redlegobutton.jpg');
+  background-image: url('assets/images/redlegobutton.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -261,7 +261,7 @@ top: 10.5em;
 }
 
 .logoFooter {
-  background-image: url('assets\\images\\legoscrollbarvertical.jpg');
+  background-image: url('assets/images/legoscrollbarvertical.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -381,7 +381,7 @@ top: 10.5em;
   position: relative;
   top: -0em;
   left: -0.25em;
-  background-image: url('assets\\images\\legoscrollbar.jpg');
+  background-image: url('assets/images/legoscrollbar.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
