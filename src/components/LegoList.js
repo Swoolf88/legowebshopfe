@@ -4,7 +4,7 @@ import LegoService from '../services/LegoService';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import axios from 'axios';
-import imageAdd from '../image/basket.jpg';
+import imageAdd from '../assets/images/basket.jpg';
 
 const LegoList = () => {
     const navigate = useNavigate();
