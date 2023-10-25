@@ -17,15 +17,6 @@ code {
     monospace;
 }
 
-.oval {
-  width: 85%;
-  background-color: rgb(255, 189, 9);
-  clip-path: ellipse(50% 50% at 50% 50%);
-  text-align: center;
-  font-size: 10px;
-color: blue;
-}
-
 .scrollbar {
   position:absolute;
     bottom: -11em;
@@ -39,10 +30,10 @@ color: blue;
   background-color: palegreen;
 }
 
-.h-12 {
-  position:absolute;
-  bottom: 18em;
-  left: 12%;
+.addLegoButton {
+  position: relative;
+  top: -60em;
+  left: 10em;
 }
 
   /* Main scrollbar styles */

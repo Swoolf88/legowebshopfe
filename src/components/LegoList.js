@@ -9,25 +9,9 @@ import imageAdd from '../assets/images/basket.jpg';
 const LegoList = () => {
     const navigate = useNavigate();
     const [image, setImage] = useState();
-    const [loading, setLoading] = useState(true)
     const [legos, setLegos] = useState(null);
     const [legoItemList, setLegoItemList] = useState([]);
     var imageUrl = "";
-    // const useEffect =((e) => {
-    //     const fetchData = async () => {
-    //         setLoading(true);
-    //         try {
-    //             const response = await LegoService.getLegos();
-    //             setLegos({legos: response.data});
-    //             setImage(URL.createObjectURL(e.target.files[0]));
-    //             console.log(legos, response.data);
-    //         } catch (error){
-    //             console.log(error);
-    //         }
-    //         setLoading(false);
-    //     };
-    //     fetchData();
-    // }, []);
 
     const deleteLego = (e, id) => {
         e.preventDefault();
@@ -63,10 +47,10 @@ const LegoList = () => {
         <>
           <Sidebar></Sidebar>        
        <div className="legoListContainer mx-auto my-8">
-       <div className="h-12">
+       <div className="addLegoButton">
             <button className="background-image-container" width="100px" height="50px" alt="addlego" onClick={() => navigate("/addLego") }>           
                 <div className="addLegoText">
-                Add Lego
+                  Add Lego
                 </div>
             </button>            
        </div>
