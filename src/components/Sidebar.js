@@ -14,7 +14,7 @@ const Sidebar = () => {
         </div>
     </div>
     <div className="cart">
-        <div className="cartText">
+        <div className="cartText" onClick={() => navigate("/cart") }>
             To the cart
         </div>
     </div>
