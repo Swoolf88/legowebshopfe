@@ -76,88 +76,90 @@ function AddLego() {
         <div className="addNewLegoContainer px-8 py-8">
           <div className="font-thin text-2xl tracking-wider">
             <div className="addNewLegoText">
-              <div className = "addNewLegoHeaderText">Add New Lego</div>
+              <div className="addNewLegoHeaderText">Add New Lego</div>
             </div>
           </div>
-          <div className="items-center justify-center h-14 w-full my-4">
-            <label className="block text-gray-600 text-sm font-normal">
-              First Name
-            </label>
-            <input
-              type="text"
-              name="firstName"
-              value={lego.firstName}
-              onChange={(e) => handleChange(e)}
-              className="h-10 w-96 border mt-2 px-2 py-2"
-            ></input>
-          </div>
-          <div className="items-center justify-center h-14 w-full my-4">
-            <label className="block text-gray-600 text-sm font-normal">
-              Last Name
-            </label>
-            <input
-              type="text"
-              name="lastName"
-              value={lego.lastName}
-              onChange={(e) => handleChange(e)}
-              className="h-10 w-96 border mt-2 px-2 py-2"
-            ></input>
-          </div>
-          <div className="items-center justify-center h-14 w-full my-4">
-            <label className="block text-gray-600 text-sm font-normal">
-              Email
-            </label>
-            <div className="emailInput">
+          <div className="inputAddContainer">
+            <div className="items-center justify-center h-14 w-full my-4">
+              <label className="block text-gray-600 text-sm font-normal">
+                First Name
+              </label>
               <input
                 type="text"
-                name="emailId"
-                value={lego.emailId}
+                name="firstName"
+                value={lego.firstName}
                 onChange={(e) => handleChange(e)}
                 className="h-10 w-96 border mt-2 px-2 py-2"
               ></input>
             </div>
-          </div>
-          <form>
-            <div className="items-center justify-center h-14 w-full my-4 space-x-4 pt-4">
-              <div className="selectFileContainer">
-                <label
-                  htmlFor="image"
-                  className="selectFileButton block text-gray-600 text-sm font-normal"
-                >
-                  Select file
-                </label>
+            <div className="items-center justify-center h-14 w-full my-4">
+              <label className="block text-gray-600 text-sm font-normal">
+                Last Name
+              </label>
+              <input
+                type="text"
+                name="lastName"
+                value={lego.lastName}
+                onChange={(e) => handleChange(e)}
+                className="h-10 w-96 border mt-2 px-2 py-2"
+              ></input>
+            </div>
+            <div className="items-center justify-center h-14 w-full my-4">
+              <label className="block text-gray-600 text-sm font-normal">
+                Email
+              </label>
+              <div className="emailInput">
                 <input
-                  className="selectFileButtonInput"
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={handleUploadFile}
-                />
-              </div>
-              <div className="imagePreview">
-                <img src={imageUrl} width="150" height="150" />
-              </div>
-              <div className="addButtonContainer buttons py-4 space-x-4">
-                <button
-                  onClick={saveLegoFile}
-                  className="background-image-container rounded text-white font-semibold bg-green-400 hover:bg-green-700 py-2 px-6"
-                >
-                  <div className="addLegoText">Save</div>
-                </button>
-                <button
-                  onClick={reset}
-                  className="background-image-container rounded text-white font-semibold bg-red-400 hover:bg-red-700 py-2 px-6"
-                >
-                  <div className="addLegoText">Clear</div>
-                </button>
-                <button
-                  onClick={goBack}
-                  className="background-image-container rounded text-white font-semibold bg-gray-400 hover:bg-gray-700 py-2 px-6"
-                >
-                  <div className="addLegoText">Back</div>
-                </button>
+                  type="text"
+                  name="emailId"
+                  value={lego.emailId}
+                  onChange={(e) => handleChange(e)}
+                  className="h-10 w-96 border mt-2 px-2 py-2"
+                ></input>
               </div>
             </div>
-          </form>
+            <form>
+              <div className="items-center justify-center h-14 w-full my-4 space-x-4 pt-4">
+                <div className="selectFileContainer">
+                  <label
+                    htmlFor="image"
+                    className="selectFileButton block text-gray-600 text-sm font-normal"
+                  >
+                    Select file
+                  </label>
+                  <input
+                    className="selectFileButtonInputAdd"
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleUploadFile}
+                  />
+                </div>
+                <div className="imagePreview">
+                  <img src={imageUrl} width="150" height="150" />
+                </div>
+                <div className="addButtonContainer buttons py-4 space-x-4">
+                  <button
+                    onClick={saveLegoFile}
+                    className="background-image-container rounded text-white font-semibold bg-green-400 hover:bg-green-700 py-2 px-6"
+                  >
+                    <div className="addLegoText">Save</div>
+                  </button>
+                  <button
+                    onClick={reset}
+                    className="background-image-container rounded text-white font-semibold bg-red-400 hover:bg-red-700 py-2 px-6"
+                  >
+                    <div className="addLegoText">Clear</div>
+                  </button>
+                  <button
+                    onClick={goBack}
+                    className="background-image-container rounded text-white font-semibold bg-gray-400 hover:bg-gray-700 py-2 px-6"
+                  >
+                    <div className="addLegoText">Back</div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
         <div className="footerContainer">
           <Footer></Footer>

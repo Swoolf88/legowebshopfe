@@ -215,7 +215,7 @@ body::-webkit-scrollbar-thumb {
 .addButtonContainer {
   display: flex;
   position: relative;
-  top: 1em;
+  top: -1em;
 }
 
 .addNewLegoText {
@@ -233,14 +233,14 @@ body::-webkit-scrollbar-thumb {
 .addNewLegoContainer {
   position: relative;
   top: -59em;
-  left: 11.5em;
+  left: 15em;
   bottom: 45em;
 }
 
 .emailInput {
-  position: absolute;
+  position: relative;
   left: 4.7em;
-  top: 10.5em;
+  top: -1.3em;
 }
 
 .logoFooter {
@@ -268,7 +268,7 @@ body::-webkit-scrollbar-thumb {
 
 .selectFileButtonInput {
   position: relative;
-  left: 0.65em;
+  left: 2em;
 }
 
 .legoListContainer {
@@ -351,13 +351,13 @@ body::-webkit-scrollbar-thumb {
 
 .selectFileContainer {
   position: relative;
-  top: 0.5em;
+  top: -1.25em;
 }
 
 .imagePreview {
   position: relative;
-  top: 1em;
-  left: 5em;
+  top: -1em;
+  left: 4.75em;
 }
 
 .sidebar {
@@ -416,7 +416,7 @@ body::-webkit-scrollbar-thumb {
 .addToCartContainer {
   position: relative;
   left: 15em;
-  top: -60em;
+  top: -59em;
 }
 
 .descriptionCartInput {
@@ -432,7 +432,7 @@ body::-webkit-scrollbar-thumb {
 .cartButtonContainer {
   display: flex;
   position: relative;
-  top: 1em;
+  top: 0.25em;
 }
 
 .checkoutCartButton {
@@ -520,4 +520,30 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   top: 1.25em;
   left: -1em;
+}
+
+.inputAddContainer {
+  position: relative;
+  top: 2em;
+}
+
+.inputCartContainer {
+  position: relative;
+  top: 2em;
+}
+
+.selectFileButtonInputAdd {
+  position: relative;
+  left: 0.5em;
+}
+
+.selectFileContainerCart {
+  position: relative;
+  top: 0em;
+}
+
+.imagePreviewCart {
+  position: relative;
+  top: 0.25em;
+  left: 6em;
 }
