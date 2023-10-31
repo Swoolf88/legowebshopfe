@@ -1,25 +1,34 @@
-import React from 'react'
-import '../index.css';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "../index.css";
+import { useNavigate } from "react-router-dom";
+import imageToCart from "../assets/images/basket.jpg";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    return (
-        <div className="sidebar">
-        <div className="home" onClick={() => navigate("/legoList")}>        
-        <div className="homeText">
-            Home
+  return (
+    <div className="sidebar">
+      <div className="home" onClick={() => navigate("/legoList")}>
+        <div className="homeText">Home</div>
+      </div>
+      <div className="cart">
+        <div className="cartText" onClick={() => navigate("/cart")}>
+          To the cart
         </div>
-    </div>
-    <div className="cart">
-        <div className="cartText">
-            To the cart
+        <img
+          className="basketIconToCart"
+          src={imageToCart}
+          width="25"
+          height="25"
+        />
+      </div>
+      <div className="addNewLegoContainerButton">
+        <div className="addNewLegoContainerButtonText" onClick={() => navigate("/addLego")}>
+            Add Lego
         </div>
+      </div>
     </div>
-    </div>
-    );
+  );
 };
 
-export default Sidebar
+export default Sidebar;
