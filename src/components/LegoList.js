@@ -47,13 +47,6 @@ const LegoList = () => {
         <>
           <Sidebar></Sidebar>        
        <div className="legoListContainer mx-auto my-8">
-       <div className="addLegoButton">
-            <button className="background-image-container" width="100px" height="50px" alt="addlego" onClick={() => navigate("/addLego") }>           
-                <div className="addLegoText">
-                  Add Lego
-                </div>
-            </button>            
-       </div>
        <div className="scrollbar">
        <div className="flex shadow border-b">
            <div className="tablelego mx-0 my-0">               

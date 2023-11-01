@@ -101,18 +101,18 @@ const handleUploadFile = (event) => {
                        onChange={(e) => handleChange(e)}
                        className="editEmailText h-10 w-96 border mt-2 px-2 py-2"></input>
             </div>
-            <div className="items-center justify-center h-14 w-full my-4 space-x-4 pt-4">
+            <div className="selectFileAndPreviewEditContainer items-center justify-center h-14 w-full my-4 space-x-4 pt-4">
                 <div className="selectFileContainer">
                     <label htmlFor="image" className="selectFileButton block text-gray-600 text-sm font-normal" >
                         Select file
                     </label>                    
                     <input 
-                    className="selectFileButtonInput"
+                    className="selectFileButtonInputEdit"
                     type="file"
                     ref={ref}
                     onChange={handleUploadFile}/>                        
                 </div>
-                <div className="imagePreview">
+                <div className="imagePreviewEdit">
                     {imageUrl ? 
                     <img src={imageUrl} width="150" height="150"/> :
                     <img src={'http://localhost:8080/api/v1/' + lego.image} width="150" height="150"/>

@@ -25,7 +25,7 @@ code {
   border: 1px solid #ccc;
   width: 520px;
   left: 28em;
-  top: 37em;
+  top: 31em;
   transform: scale(2);
   background-color: palegreen;
 }
@@ -380,8 +380,8 @@ body::-webkit-scrollbar-thumb {
 
 .editLegoContainer {
   position: relative;
-  top: -60em;
-  left: 12em;
+  top: -59em;
+  left: 15em;
 }
 
 .editLegoFooter {
@@ -403,7 +403,7 @@ body::-webkit-scrollbar-thumb {
   transform: scale(0.75);
   display: flex;
   position: relative;
-  top: 1em;
+  top: -0.5em;
   left: -10em;
 }
 
@@ -546,4 +546,20 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   top: 0.25em;
   left: 6em;
+}
+
+.selectFileAndPreviewEditContainer {
+  position: relative;
+  top: 1.25em;
+}
+
+.selectFileButtonInputEdit {
+  position: relative;
+  left: 0.5em;
+}
+
+.imagePreviewEdit {
+  position: relative;
+  top: -1em;
+  left: 3em;
 }
