@@ -63,6 +63,11 @@ const LegoList = () => {
                               ) : (
                                 <p>Loading image...</p>
                               )}
+                              <div className="like">
+                                <Like>
+                                  
+                                </Like>
+                              </div>
                             <p className="descriptionText">{val.firstName}</p>
                             <p className="priceText">{val.lastName}</p>
                              <div className="text-left px-2 py-0 whitespace-nowrap font-medium text-sm">
