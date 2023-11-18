@@ -6,7 +6,7 @@ const Navbar = () => {
         <div className="bg-gray-800">
           <div className="logovertical">        
         <div className="h-16 px-8">
-          <p className="legowebshoptext">Lego Webshop</p>
+          <p className="legowebshoptext">MarketTrading</p>
         </div>
         </div>
       </div>

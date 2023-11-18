@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import LegoList from './components/LegoList';
 import EditLego from './components/EditLego';
 import Cart from './components/Cart';
+import OurPartners from './components/OurPartners';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/addLego" element={<AddLego />} />
       <Route path="/editLego/:id" element={<EditLego />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/ourPartners" element={<OurPartners />} />
     </Routes>
   </BrowserRouter> 
   </>   

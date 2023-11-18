@@ -27,6 +27,12 @@ const Sidebar = () => {
             Add Lego
         </div>
       </div>
+      <div className="productCategories" onClick={() => navigate("/productCategories")}>
+        <div className="productCategoriesText">Product categories</div>
+      </div>
+      <div className="ourPartners" onClick={() => navigate("/ourPartners")}>
+        <div className="ourPartnersText">Our partners</div>
+      </div>
     </div>
   );
 };

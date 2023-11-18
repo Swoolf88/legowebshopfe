@@ -563,3 +563,45 @@ body::-webkit-scrollbar-thumb {
   top: -1em;
   left: 3em;
 }
+
+
+.productCategories {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  position: relative;
+  top: 3em;
+  bottom: 0em;
+  left: 0em;
+  height: fit-content;
+  margin: auto;
+}
+
+.productCategoriesText {
+  position: relative;
+  top: 0.25em;
+}
+
+.ourPartners {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  position: relative;
+  top: 3em;
+  bottom: 0em;
+  left: 0em;
+  height: fit-content;
+  margin: auto;
+}
+
+.ourPartnersText {
+  position: relative;
+  top: 0.25em;
+}
+
+.contentText {
+  font-size: larger;
+  position: relative;
+  top: -50em;
+  left: 10em;
+}
