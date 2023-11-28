@@ -5,6 +5,7 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import axios from 'axios';
 import imageAdd from '../assets/images/basket.jpg';
+import Like from './Like';
 
 const LegoList = () => {
     const navigate = useNavigate();

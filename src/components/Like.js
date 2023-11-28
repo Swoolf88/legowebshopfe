@@ -6,9 +6,11 @@ import Footer from './Footer';
 import axios from 'axios';
 import heartFull from '../assets/images/heartfull.jpg';
 import heartEmpty from '../assets/images/heartempty.jpg';
-const LegoList = () => {
+
+const Like = () => {
     const navigate = useNavigate();
     const [like, setLike] = useState();
+    const [active, setActive] = useState(false);
 
     const getLikes = async () => {
         axios.get("http://localhost:8080/api/v1/like").then((response) => {
@@ -29,10 +31,12 @@ const LegoList = () => {
     return (
         <>
                 <div className="likeLego">
-                <img src={heartFull} width="150" height="150" /> 
-                     </div>
+                <div style={{ width: "2rem" }}>
+			<img src={heartFull} width="150" height="150" isActive={active} onClick={() => setActive(!active)}/>
+		</div>
+                              </div>
                                                 </>
                                             );
                                         }
 
-export default LegoList
+export default Like
