@@ -11,6 +11,7 @@ function AddLego() {
     id: "",
     firstName: "",
     lastName: "",
+    likeId: "",
     emailId: "",
     image: "",
   });
@@ -30,6 +31,7 @@ function AddLego() {
       id: "",
       firstName: "",
       lastName: "",
+      likeId: "",
       emailId: "",
       image: "",
     });
@@ -56,6 +58,7 @@ function AddLego() {
     data.append("image", image);
     data.append("firstName", lego.firstName);
     data.append("lastName", lego.lastName);
+    data.append("likeId", 0);
     data.append("emailId", lego.emailId);
     axios
       .post("http://localhost:8080/api/v1/addLego", data)

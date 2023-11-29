@@ -6,12 +6,25 @@ import Footer from './Footer';
 import axios from 'axios';
 import imageAdd from '../assets/images/basket.jpg';
 import Like from './Like';
+import heartFull from "../assets/images/heartfull.jpg";
+import heartEmpty from "../assets/images/heartempty.jpg";
 
 const LegoList = () => {
     const navigate = useNavigate();
     const [image, setImage] = useState();
     const [legos, setLegos] = useState(null);
     const [legoItemList, setLegoItemList] = useState([]);
+  const [likeId, setLikeId] = useState([]);
+
+  const [lego, setLego] = useState({
+        id: 2,
+        firstName: "",
+        lastName: "",
+        like: "",
+        emailId: "",
+        image: "",
+})
+
     var imageUrl = "";
 
     const deleteLego = (e, id) => {
@@ -44,6 +57,21 @@ const LegoList = () => {
       navigate(`/editLego/${id}`);
   };
 
+  const putLikes = (e, id) => {
+     e.preventDefault();
+	setLikeId[id]((prevLike) => !prevLike);
+    const data = new FormData();
+    data.append("image", 2);
+    data.append("firstName", lego.firstName);
+    data.append("lastName", lego.lastName);
+    data.append("likeId", legoItemList.likeId);
+    data.append("emailId", lego.emailId);
+        // '/files' is your node.js route that triggers our middleware
+        axios.put("http://localhost:8080/api/v1/legos/" + id, data).then((response) => {
+          console.log(response); // do something with the response
+        });
+};
+
     return (
         <>
           <Sidebar></Sidebar>        
@@ -65,9 +93,15 @@ const LegoList = () => {
                                 <p>Loading image...</p>
                               )}
                               <div className="like">
-                                <Like>
-                                  
-                                </Like>
+                              <div className="likeLego">
+        <img
+        id={val.id}
+          src={likeId[val.id] ? heartFull : heartEmpty}
+          width="25"
+          height="25"
+          onClick={(e, id) => putLikes(e, val.id)}
+        />
+      </div>
                               </div>
                             <p className="descriptionText">{val.firstName}</p>
                             <p className="priceText">{val.lastName}</p>
