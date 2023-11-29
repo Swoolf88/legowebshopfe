@@ -608,12 +608,18 @@ body::-webkit-scrollbar-thumb {
 
 .productCategoriesHeaderText {
   position: relative;
-  top: -78em;
+  top: -58em;
   left: 14em;
 }
 
 .productCategoriesLabel {
   position: relative;
-  top: 0.25em;
-  left: 1em;
+  top: -55em;
+  left: 14em;
+}
+
+.inputProductCategories {
+  position: relative;
+  top: -66em;
+  left: 18em;
 }
