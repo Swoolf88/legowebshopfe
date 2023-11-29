@@ -6,6 +6,7 @@ import LegoList from './components/LegoList';
 import EditLego from './components/EditLego';
 import Cart from './components/Cart';
 import OurPartners from './components/OurPartners';
+import ProductCategories from './components/ProductCategories';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/editLego/:id" element={<EditLego />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/ourPartners" element={<OurPartners />} />
+      <Route path="/productCategories" element={<ProductCategories />} />
     </Routes>
   </BrowserRouter> 
   </>   

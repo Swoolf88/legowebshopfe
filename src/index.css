@@ -605,3 +605,15 @@ body::-webkit-scrollbar-thumb {
   top: -50em;
   left: 10em;
 }
+
+.productCategoriesHeaderText {
+  position: relative;
+  top: -78em;
+  left: 14em;
+}
+
+.productCategoriesLabel {
+  position: relative;
+  top: 0.25em;
+  left: 1em;
+}
