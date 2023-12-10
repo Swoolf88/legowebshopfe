@@ -5,72 +5,54 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 function ProductCategories() {
+
   const ref = useRef();
 
-  const [lego, setLego] = useState({
+  const [productCategories, setProductCategories] = useState({
     id: "",
-    firstName: "",
-    lastName: "",
-    likeId: "",
-    emailId: "",
-    image: "",
+    productCategories: "",
   });
 
-  const [image, setImage] = useState(null);
-  const [imageUrl, setImageUrl] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
     const value = e.target.value;
-    setLego({ ...lego, [e.target.name]: value });
+    setProductCategories({ ...productCategories, [e.target.name]: value });
   };
 
-  const reset = (e) => {
-    e.preventDefault();
-    setLego({
-      id: "",
-      firstName: "",
-      lastName: "",
-      likeId: "",
-      emailId: "",
-      image: "",
-    });
-    clearFileInput();
-  };
-
-  const handleUploadFile = (e) => {
-    setImageUrl(URL.createObjectURL(e.target.files[0]));
-    setImage(e.target.files[0]);
-  };
-
-  const fileInputRef = useRef(null);
-
-  const clearFileInput = () => {
-    // Reset the input element by setting its value to an empty string
-    if (fileInputRef.current) {
-      fileInputRef.current.value = "";
-    }
-  };
-
-  function saveLegoFile(e) {
+  function addProductCategories(e) {
     e.preventDefault();
     const data = new FormData();
-    data.append("image", image);
-    data.append("firstName", lego.firstName);
-    data.append("lastName", lego.lastName);
-    data.append("likeId", 0);
-    data.append("emailId", lego.emailId);
+    data.append("productCategories", productCategories.productCategories);
     axios
-      .post("http://localhost:8080/api/v1/addLego", data)
+      .post("http://localhost:8080/api/v1/productCategories", data)
       .then((response) => {
         console.log(response); // do something with the response
       });
-    navigate(`/legoList`);
   }
 
-  const goBack = (e) => {
-    navigate(`/legoList`);
-  };
+const deleteProductCategories = (e, id) => {
+        e.preventDefault();
+        axios
+      .delete("http://localhost:8080/api/v1/productCategories/" + id)
+      .then((response) => {
+            if(productCategories) {
+                setProductCategories((prevElement) => {
+                    return prevElement.filter((productCategories) => productCategories.id !== id);
+                });
+            }
+        });
+    };
+
+const editProductCategories = (e, id) => {
+    e.preventDefault();
+    const data = new FormData();
+        data.append("productCategories", productCategories.productCategories);
+        axios.put("http://localhost:8080/api/v1/productCategories/" + id, data).then((response) => {
+          console.log(response); // do something with the response
+        });
+};
+
 
   return (
     <>
@@ -85,24 +67,24 @@ function ProductCategories() {
               <input
                 type="text"
                 name="productCategories"
-                value={lego.firstName}
+                value={productCategories.productCategories}
                 onChange={(e) => handleChange(e)}
                 className="inputProductCategories">
 	      </input>
             </div>
                 <div className="productCategoriesButtonContainer">
                   <button
-                    onClick={saveLegoFile}
+                    onClick={addProductCategories}
                     className="addButtonProductCategories">
                     <div className="addProductCategoriesText">Add</div>
                   </button>
                   <button
-                    onClick={saveLegoFile}
+                    onClick={editProductCategories}
                     className="editButtonProductCategories">
                     <div className="editProductCategoriesText">Edit</div>
                   </button>
                   <button
-                    onClick={saveLegoFile}
+                    onClick={deleteProductCategories}
                     className="deleteButtonProductCategories">
                     <div className="deleteProductCategoriesText">Delete</div>
                   </button>

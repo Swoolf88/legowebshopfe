@@ -623,3 +623,18 @@ body::-webkit-scrollbar-thumb {
   top: -66em;
   left: 18em;
 }
+
+.productCategoriesButtonContainer {
+  position: relative;
+  top: -56.5em;
+  left: 35em;
+}
+
+.footerContainerProductCategories {
+  position: relative;
+  top: -4.5em;
+}
+
+
+
+
